@@ -1,0 +1,24 @@
+{
+  "name": "signaling-server",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andreas Streichardt <andreas.streichardt@gmail.com>",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "bunyan": "^1.2.3",
+    "mop-rpc": "git://github.com/m0ppers/mop-rpc",
+    "redis": "^0.12.1",
+    "scrypt": "^3.0.1",
+    "uuid": "^2.0.1",
+    "kamelladjutant-common": "git://github.com/m0ppers/kamelladjutant-common",
+    "websocket": "~1.0.14"
+  },
+  "devDependencies": {
+    "mocha": "^2.1.0",
+    "q": "^1.1.2"
+  }
+}
