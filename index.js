@@ -6,6 +6,11 @@ var redis = require("redis");
         
 var createCallbacksFactory = require("./lib/callbacksFactory");
 
+var allowedOrigins = config.allowOrigin;
+if (allowedOrigins && !Array.isArray(allowedOrigins)) {
+    allowedOrigins = [allowedOrigins];
+}
+
 var log = bunyan.createLogger({
     name: 'signaling server',
     serializers: {
@@ -60,8 +65,14 @@ redisClient.on("ready", function() {
 
     function originIsAllowed(origin) {
         log.trace("Origin", origin);
-        // put logic here to detect whether the specified origin is allowed.
-        return true;
+        if (allowedOrigins) {
+            var allowed = allowedOrigins.filter(function(allowedOrigin) {
+                return origin == allowedOrigin;
+            });
+            return allowed.length > 0;
+        } else {
+            return true;
+        }
     }
 
     var clients = [];

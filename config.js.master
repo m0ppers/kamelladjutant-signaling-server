@@ -6,4 +6,6 @@ config.redis.port = 6379;
 config.redis.host = "127.0.0.1";
 config.redis.socket = undefined;
 
+config.allowOrigin = undefined; // mop: array of allowed origins (optional)
+
 module.exports = config;
