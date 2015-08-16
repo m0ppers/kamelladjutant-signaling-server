@@ -10,11 +10,11 @@
   "license": "Unlicense",
   "dependencies": {
     "bunyan": "^1.2.3",
+    "kamelladjutant-common": "git://github.com/m0ppers/kamelladjutant-common",
     "mop-rpc": "git://github.com/m0ppers/mop-rpc",
     "redis": "^0.12.1",
-    "scrypt": "^3.0.1",
+    "scrypt": "^4.0.7",
     "uuid": "^2.0.1",
-    "kamelladjutant-common": "git://github.com/m0ppers/kamelladjutant-common",
     "websocket": "~1.0.14"
   },
   "devDependencies": {
