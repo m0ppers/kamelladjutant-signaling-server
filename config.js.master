@@ -2,8 +2,8 @@ var config = {};
 
 config.port  = 9891;
 config.redis = {};
-config.redis.port = 6379;
-config.redis.host = "127.0.0.1";
+config.redis.host = process.env.REDIS_HOST;
+config.redis.port = process.env.REDIS_PORT;
 config.redis.socket = undefined;
 
 config.allowOrigin = undefined; // mop: array of allowed origins (optional)
